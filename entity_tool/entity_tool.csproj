@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65AAA49B-DA5D-4CF0-A0A6-73B894CCDF77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>entity_tool</RootNamespace>
+    <AssemblyName>entity_tool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <CodeAnalysisRuleSet>GlobalizationRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <FileAlignment>4096</FileAlignment>
+    <CodeAnalysisRuleSet>GlobalizationRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>UsertypeDefTools.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSharpCodeExport.cs" />
+    <Compile Include="Dev\DesignPattern\DisposableObject.cs" />
+    <Compile Include="Dev\DesignPattern\Singleton.cs" />
+    <Compile Include="Dev\Log\ConsoleLog.cs" />
+    <Compile Include="Dev\Log\FileLog.cs" />
+    <Compile Include="Dev\Log\ILog.cs" />
+    <Compile Include="Dev\Log\Log.cs" />
+    <Compile Include="Dev\XmlHelper\ConfigParser.cs" />
+    <Compile Include="EntityDef\EntityDef.cs" />
+    <Compile Include="EntityWidget\MethodWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityWidget\MethodWindow.Designer.cs">
+      <DependentUpon>MethodWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityWidget\PropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityWidget\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PythonCodeExport.cs" />
+    <Compile Include="SlnConfig.cs" />
+    <Compile Include="UserTypeWidget\TypeChooseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTypeWidget\TypeChooseWindow.Designer.cs">
+      <DependentUpon>TypeChooseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTypes\UserTypeConverter.cs" />
+    <Compile Include="UserTypes\UserType.cs" />
+    <Compile Include="UserTypeWidget\AliasTypeWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTypeWidget\AliasTypeWidget.Designer.cs">
+      <DependentUpon>AliasTypeWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTypeWidget\ArrayTypeWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTypeWidget\ArrayTypeWidget.Designer.cs">
+      <DependentUpon>ArrayTypeWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTypeWidget\BaseTypeWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTypeWidget\BaseTypeWidget.Designer.cs">
+      <DependentUpon>BaseTypeWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityWidget\EntityDefWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntityWidget\EntityDefWidget.Designer.cs">
+      <DependentUpon>EntityDefWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTypeWidget\PropertyWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTypeWidget\PropertyWidget.Designer.cs">
+      <DependentUpon>PropertyWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTypeWidget\UserTypeWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTypeWidget\UserTypeWidget.Designer.cs">
+      <DependentUpon>UserTypeWidget.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EntityWidget\MethodWindow.resx">
+      <DependentUpon>MethodWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityWidget\PropertyWindow.resx">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserTypeWidget\TypeChooseWindow.resx">
+      <DependentUpon>TypeChooseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTypeWidget\AliasTypeWidget.resx">
+      <DependentUpon>AliasTypeWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTypeWidget\ArrayTypeWidget.resx">
+      <DependentUpon>ArrayTypeWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTypeWidget\BaseTypeWidget.resx">
+      <DependentUpon>BaseTypeWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityWidget\EntityDefWidget.resx">
+      <DependentUpon>EntityDefWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTypeWidget\PropertyWidget.resx">
+      <DependentUpon>PropertyWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTypeWidget\UserTypeWidget.resx">
+      <DependentUpon>UserTypeWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
